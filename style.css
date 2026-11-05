@@ -757,3 +757,20 @@ html {
   height: 100%;
   border: none;
 }
+
+/* フォントの設定 */
+
+/* 本文は読みやすいゴシック体 */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* 見出しはレトロで上品な明朝体 */
+h1, h2, h3 {
+  font-family: "Noto Serif JP", serif;
+}
+
+/* ナビゲーションも明朝体に */
+nav a {
+  font-family: "Noto Serif JP", serif;
+}

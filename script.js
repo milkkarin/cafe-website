@@ -71,3 +71,44 @@ backToTop.addEventListener("click", () => {
   });
 
 });
+
+// ライトボックスの要素を取得
+const lightbox = document.querySelector("#lightbox");
+const lightboxImage = document.querySelector("#lightbox-image");
+const lightboxClose = document.querySelector("#lightbox-close");
+
+// メニュー写真をすべて取得
+const menuImages = document.querySelectorAll(".menu-card img");
+
+// 写真をクリックしたら拡大表示
+menuImages.forEach((image) => {
+  image.addEventListener("click", () => {
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    lightbox.hidden = false;
+    lightboxClose.focus();
+  });
+});
+
+// ライトボックスを閉じる関数
+function closeLightbox() {
+  lightbox.hidden = true;
+  lightboxImage.removeAttribute("src");
+}
+
+// ×ボタンを押して閉じる
+lightboxClose.addEventListener("click", closeLightbox);
+
+// 写真の外側を押して閉じる
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+// Escapeキーでも閉じる
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !lightbox.hidden) {
+    closeLightbox();
+  }
+});

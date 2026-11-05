@@ -1,4 +1,14 @@
 
+/* 練習サイトのお知らせ */
+.demo-notice {
+  background-color: #E8D9BE;
+  color: #493629;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
 body {
   background-color: #FAF7F0;
   color: #493629;

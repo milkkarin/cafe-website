@@ -813,3 +813,51 @@ h1, h2, h3 {
 nav a {
   font-family: "Noto Serif JP", serif;
 }
+
+/* ライトボックス全体 */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px 20px;
+  box-sizing: border-box;
+}
+
+/* 非表示のとき */
+.lightbox[hidden] {
+  display: none;
+}
+
+/* 拡大する写真 */
+#lightbox-image {
+  display: block;
+  max-width: 90%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* 閉じるボタン */
+#lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+/* メニュー写真にクリックできる印をつける */
+.menu-card img {
+  cursor: zoom-in;
+}

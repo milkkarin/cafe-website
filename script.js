@@ -45,3 +45,29 @@ navLinks.forEach((link) => {
   });
 
 });
+
+/* ページトップに戻るボタン */
+
+// ボタンを取得
+const backToTop = document.querySelector("#back-to-top");
+
+// スクロールしたときの処理
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 300) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+
+});
+
+// ボタンをクリックしたときの処理
+backToTop.addEventListener("click", () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+});

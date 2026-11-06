@@ -112,3 +112,30 @@ document.addEventListener("keydown", (event) => {
     closeLightbox();
   }
 });
+
+/* Cookie同意バナー */
+
+// HTMLの要素を取得
+const cookieBanner = document.querySelector("#cookie-banner");
+const cookieAccept = document.querySelector("#cookie-accept");
+const cookieReject = document.querySelector("#cookie-reject");
+
+// 保存されている選択を確認
+const cookieConsent = localStorage.getItem("cookie-consent");
+
+// まだ選んでいない場合はバナーを表示
+if (cookieConsent !== "accepted" && cookieConsent !== "rejected") {
+  cookieBanner.hidden = false;
+}
+
+// 「同意する」をクリックしたとき
+cookieAccept.addEventListener("click", () => {
+  localStorage.setItem("cookie-consent", "accepted");
+  cookieBanner.hidden = true;
+});
+
+// 「同意しない」をクリックしたとき
+cookieReject.addEventListener("click", () => {
+  localStorage.setItem("cookie-consent", "rejected");
+  cookieBanner.hidden = true;
+});

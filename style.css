@@ -861,3 +861,81 @@ nav a {
 .menu-card img {
   cursor: zoom-in;
 }
+
+/* Cookie同意バナー */
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 40px);
+  max-width: 600px;
+  box-sizing: border-box;
+
+  padding: 24px;
+  background-color: #FAF7F0;
+  color: #382315;
+  border: 1px solid #D8C6AF;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+  z-index: 3000;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* 非表示のとき */
+.cookie-banner[hidden] {
+  display: none;
+}
+
+/* プライバシーポリシーへのリンク */
+.cookie-banner a {
+  color: #85512C;
+  text-decoration: underline;
+}
+
+/* ボタンを横並びにする */
+.cookie-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* ボタン共通 */
+.cookie-buttons button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 同意するボタン */
+#cookie-accept {
+  background-color: #85512C;
+  color: white;
+  border: 1px solid #85512C;
+}
+
+/* 同意しないボタン */
+#cookie-reject {
+  background-color: transparent;
+  color: #85512C;
+  border: 1px solid #85512C;
+}
+
+/* スマホ表示 */
+@media (max-width: 480px) {
+  .cookie-banner {
+    bottom: 10px;
+    width: calc(100% - 20px);
+    padding: 18px;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+  }
+}

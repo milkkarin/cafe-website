@@ -71,7 +71,7 @@ nav a {
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.1)
     ),
-    url("images/hero.jpg");
+       url("images/pudding.jpg");
 
   background-size: cover;
   background-position: center;
@@ -128,7 +128,7 @@ nav a {
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.1)
     ),
-    url("images/hero.jpg");
+        url("images/pudding.jpg");
 
   background-size: cover;
   background-position: center;

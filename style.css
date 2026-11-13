@@ -25,7 +25,7 @@ p {
 
 /* ヘッダー全体 */
 header {
-  background-color: #382315;
+  background-color: #85512C;
   color: #FFF7EA;
   padding: 20px 40px;
 }
@@ -71,7 +71,7 @@ nav a {
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.1)
     ),
-    url("images/hero.jpg");
+       url("images/pudding.jpg");
 
   background-size: cover;
   background-position: center;
@@ -128,7 +128,7 @@ nav a {
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.1)
     ),
-    url("images/hero.jpg");
+        url("images/pudding.jpg");
 
   background-size: cover;
   background-position: center;
@@ -860,4 +860,92 @@ nav a {
 /* メニュー写真にクリックできる印をつける */
 .menu-card img {
   cursor: zoom-in;
+}
+/* トップの「アクセスを見る」ボタン */
+.hero-buttons a[href="#access"] {
+  background-color: #59613A;
+}
+
+.hero-buttons a[href="#access"]:hover {
+  background-color: #454D2C;
+}
+/* メニューカードの飾り枠 */
+.menu-card {
+  border: 3px double #B88C62;
+  border-radius: 4px;
+}
+/* アイボリーの背景に紙の粒を重ねる */
+.story,
+.atmosphere {
+  background-image:
+    radial-gradient(circle at 2px 3px, rgba(133, 81, 44, 0.07) 0.5px, transparent 0.9px),
+    radial-gradient(circle at 5px 4px, rgba(133, 81, 44, 0.05) 0.5px, transparent 0.9px);
+  background-size: 7px 11px, 13px 9px;
+}
+/* プリンの写真に重なる文字を読みやすくする */
+.hero {
+  background-image:
+    linear-gradient(to right, rgba(35, 22, 13, 0.78), transparent 80%),
+    url("images/pudding.jpg");
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image:
+      linear-gradient(
+        to bottom,
+        transparent,
+        rgba(35, 22, 13, 0.72) 45%,
+        rgba(35, 22, 13, 0.72) 75%,
+        rgba(35, 22, 13, 0.25)
+      ),
+      url("images/pudding.jpg");
+  }
+}
+/* 「マスターの想い」に添えるコーヒーカップ */
+.story-text h2 {
+  position: relative;
+  padding-left: 1.3em;
+}
+
+/* カップ本体と受け皿 */
+.story-text h2::before {
+  content: "";
+  position: absolute;
+  top: 0.27em;
+  left: 0.06em;
+  width: 0.68em;
+  height: 0.46em;
+  box-sizing: border-box;
+  border: 2px solid #A3734D;
+  border-radius: 18% 12% 45% 38%;
+  box-shadow: 0 4px 0 -2px #A3734D;
+  transform: rotate(-7deg);
+}
+
+/* カップの取っ手 */
+.story-text h2::after {
+  content: "";
+  position: absolute;
+  top: 0.31em;
+  left: 0.71em;
+  width: 0.18em;
+  height: 0.23em;
+  border: 2px solid #A3734D;
+  border-left: 0;
+  border-radius: 0 55% 65% 0;
+  transform: rotate(-7deg);
+}
+/* 「店内の雰囲気」に添える葉っぱ */
+.atmosphere h2::after {
+  content: "";
+  display: inline-block;
+  width: 0.45em;
+  height: 0.7em;
+  margin-left: 0.35em;
+  vertical-align: 0.05em;
+  box-sizing: border-box;
+  border: 1.5px solid #59613A;
+  border-radius: 75% 0 75% 0;
+  transform: rotate(18deg);
 }

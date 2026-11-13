@@ -861,3 +861,11 @@ nav a {
 .menu-card img {
   cursor: zoom-in;
 }
+/* トップの「アクセスを見る」ボタン */
+.hero-buttons a[href="#access"] {
+  background-color: #59613A;
+}
+
+.hero-buttons a[href="#access"]:hover {
+  background-color: #454D2C;
+}

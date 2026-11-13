@@ -936,3 +936,16 @@ nav a {
   border-radius: 0 55% 65% 0;
   transform: rotate(-7deg);
 }
+/* 「店内の雰囲気」に添える葉っぱ */
+.atmosphere h2::after {
+  content: "";
+  display: inline-block;
+  width: 0.45em;
+  height: 0.7em;
+  margin-left: 0.35em;
+  vertical-align: 0.05em;
+  box-sizing: border-box;
+  border: 1.5px solid #59613A;
+  border-radius: 75% 0 75% 0;
+  transform: rotate(18deg);
+}

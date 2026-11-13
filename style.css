@@ -882,3 +882,23 @@ nav a {
     radial-gradient(circle at 5px 4px, rgba(133, 81, 44, 0.05) 0.5px, transparent 0.9px);
   background-size: 7px 11px, 13px 9px;
 }
+/* プリンの写真に重なる文字を読みやすくする */
+.hero {
+  background-image:
+    linear-gradient(to right, rgba(35, 22, 13, 0.78), transparent 80%),
+    url("images/pudding.jpg");
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image:
+      linear-gradient(
+        to bottom,
+        transparent,
+        rgba(35, 22, 13, 0.72) 45%,
+        rgba(35, 22, 13, 0.72) 75%,
+        rgba(35, 22, 13, 0.25)
+      ),
+      url("images/pudding.jpg");
+  }
+}

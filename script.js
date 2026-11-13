@@ -112,6 +112,3 @@ document.addEventListener("keydown", (event) => {
     closeLightbox();
   }
 });
-
-consent", "rejected");
-  cookieBanner.hidden = true;

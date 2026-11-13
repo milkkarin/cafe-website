@@ -902,3 +902,37 @@ nav a {
       url("images/pudding.jpg");
   }
 }
+/* 「マスターの想い」に添えるコーヒーカップ */
+.story-text h2 {
+  position: relative;
+  padding-left: 1.3em;
+}
+
+/* カップ本体と受け皿 */
+.story-text h2::before {
+  content: "";
+  position: absolute;
+  top: 0.27em;
+  left: 0.06em;
+  width: 0.68em;
+  height: 0.46em;
+  box-sizing: border-box;
+  border: 2px solid #A3734D;
+  border-radius: 18% 12% 45% 38%;
+  box-shadow: 0 4px 0 -2px #A3734D;
+  transform: rotate(-7deg);
+}
+
+/* カップの取っ手 */
+.story-text h2::after {
+  content: "";
+  position: absolute;
+  top: 0.31em;
+  left: 0.71em;
+  width: 0.18em;
+  height: 0.23em;
+  border: 2px solid #A3734D;
+  border-left: 0;
+  border-radius: 0 55% 65% 0;
+  transform: rotate(-7deg);
+}

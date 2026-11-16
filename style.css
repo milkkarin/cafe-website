@@ -989,3 +989,8 @@ nav a {
   position: relative;
   z-index: 1;
 }
+
+/* スライドショー用：古い背景画像を消す */
+.hero {
+  background-image: none;
+}

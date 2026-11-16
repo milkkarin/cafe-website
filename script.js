@@ -112,3 +112,27 @@ document.addEventListener("keydown", (event) => {
     closeLightbox();
   }
 });
+
+/* トップ画像の自動スライドショー */
+
+// 4枚の写真を取得する
+const heroSlides = document.querySelectorAll(".hero-slide");
+
+// 現在表示している写真の番号
+let currentSlide = 0;
+
+// 5秒ごとに次の写真へ切り替える
+if (heroSlides.length > 1) {
+  setInterval(() => {
+
+    // 現在の写真を非表示にする
+    heroSlides[currentSlide].classList.remove("active");
+
+    // 次の写真番号を計算する
+    currentSlide = (currentSlide + 1) % heroSlides.length;
+
+    // 次の写真を表示する
+    heroSlides[currentSlide].classList.add("active");
+
+  }, 5000);
+}
